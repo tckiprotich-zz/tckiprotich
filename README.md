@@ -1,6 +1,10 @@
 # 💫 About Me:
 Kenyan based JavaScript Developer, UX designer and musicphile 
 
+by adding the following to your README.md:
+
+[![@tckiprotich's Holopin board](https://holopin.me/tckiprotich)](https://holopin.io/@tckiprotich)
+
 
 ## 🌐 Socials:
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/Collins-tonui) [![Reddit](https://img.shields.io/badge/Reddit-%23FF4500.svg?logo=Reddit&logoColor=white)](https://reddit.com/user/Iphurts) [![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?logo=Twitter&logoColor=white)](https://twitter.com/Tckiprotich) 
