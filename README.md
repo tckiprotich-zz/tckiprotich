@@ -1,7 +1,6 @@
 # 💫 About Me:
 Kenyan based JavaScript Developer, UX designer and musicphile 
 
-by adding the following to your README.md:
 
 [![@tckiprotich's Holopin board](https://holopin.me/tckiprotich)](https://holopin.io/@tckiprotich)
 
