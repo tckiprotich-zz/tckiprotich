@@ -2,7 +2,7 @@
 Kenyan based JavaScript Developer, UX designer and musicphile 
 
 
-[![@tckiprotich's Holopin board](https://holopin.me/tckiprotich)](https://holopin.io/@tckiprotich)
+
 
 
 ## 🌐 Socials:
