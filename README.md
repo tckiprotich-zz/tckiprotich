@@ -1,5 +1,6 @@
 # 💫 About Me:
-Kenyan based JavaScript Developer, UX designer and musicphile 
+Talented backend developer adept at contributing to highly collaborative work environment, finding solutions and determining customer satisfaction. Designed and developed web applications across multiple APIs, third-party integrations and databases.
+I am also a multidisciplinary designer with a curious mind, I enjoy to meet new people and understand how they are solving problems as a chance to improve myself as a professional and put things in practice when I’m creating my solutions
 
 
 
