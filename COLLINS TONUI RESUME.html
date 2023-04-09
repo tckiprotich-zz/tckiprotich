@@ -1,0 +1,684 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Collins Tonui</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	background-color: #161010;
+	color: white;
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(187, 184, 177);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #929090;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgb(15, 15, 14);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="c7da1d53-7e00-4ada-a7e6-287b461549a3" class="page sans"><header><img class="page-cover-image" src="Collins%20Tonui%20c7da1d537e004adaa7e6287b461549a3/bg.jpg" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="Collins%20Tonui%20c7da1d537e004adaa7e6287b461549a3/20230409_1525231.jpg"/></div><h1 class="page-title">Collins Tonui</h1></header><div class="page-body"><p id="a2572fd8-116f-46f2-9c39-c4f29190ddfc" class=""><h2>Software Engineer</h2><br></p><h3 id="115751fd-80d7-4e5a-91a8-6c0885f50af9" class=""><strong>Contacts</strong></h3><div id="3a089b18-626a-494e-99d6-f7a78ee8c625" class="column-list"><div id="c17b9235-295a-43d5-a1bc-86efdf1cf8dc" style="width:37.5%" class="column"><p id="3b2cd751-f13a-4a05-9043-4a178a80a1ba" class="block-color-gray"><strong>Email address</strong></p><p id="cab0a99d-1023-4f93-9608-655daf60a370" class="block-color-gray"><mark class="highlight-blue"><a href="mailto:tckiprotich@outlook.com">📧 tckiprotich@outlook.com</a></mark></p></div><div id="0b63a614-3f44-4e35-a8d2-80443940a8bd" style="width:33.33333333333333%" class="column"><p id="9e7153a6-0053-440f-aa82-1db1132897fa" class="block-color-gray">LinkedIn</p><p id="0aa66136-55c7-40c1-a2ed-09539f35e45e" class=""><mark class="highlight-blue"><a href="https://www.linkedin.com/in/collins-tonui">collins-tonui</a></mark></p></div><div id="95765105-3df5-4e61-8e05-ee93d0e138a5" style="width:29.166666666666696%" class="column"><p id="836f7305-d0b1-4fba-b17c-1540d8b05e89" class="block-color-gray"><strong>Website</strong></p><p id="f0f7c0fb-b4db-4308-b470-1a94f52de697" class=""><mark class="highlight-blue"><a href="https://tckiprotich.vercel.app">tckiprotich</a></mark></p></div></div><h3 id="e3925ec1-bf9c-438b-a57e-68e93265e7e9" class=""><strong>Socials</strong></h3><div id="8f350348-ae87-45c9-b71d-28bc6a105c70" class="column-list"><div id="c808cdd1-e322-4898-a967-f09b7595c27b" style="width:33.33333333333333%" class="column"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="e9d3268c-36ff-4877-a579-33ca04ab9ddb"><div style="font-size:1.5em"><img class="icon" src="Collins%20Tonui%20c7da1d537e004adaa7e6287b461549a3/Group_37_4.png"/></div><div style="width:100%"><a href="http://instagram.com/tckiprotich">Instagram</a></div></figure></div><div id="63d28a8a-556c-4f6e-bb59-272f2f0ff97e" style="width:33.33333333333333%" class="column"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="f6a37f63-7ed9-4bf3-b755-f767952b73d5"><div style="font-size:1.5em"><img class="icon" src="Collins%20Tonui%20c7da1d537e004adaa7e6287b461549a3/Group_37_7.png"/></div><div style="width:100%"><a href="http://Facebook.com">Twitter</a></div></figure></div><div id="9c606369-08d9-4e4b-9852-94cf9280e39d" style="width:33.33333333333333%" class="column"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="6c41cd5d-0ad6-48a6-881e-17e48af139af"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/code_purple.svg"/></div><div style="width:100%">G<a href="http://Facebook.com">itHub</a></div></figure></div></div><p id="02a9c5b0-bc4b-489e-b317-deaaade5e043" class="">
+</p><hr id="e9659b49-bfdd-4976-8fff-c3f416344fa9"/><h1 id="95c052f5-54d4-402b-be0e-626caa81dd27" class="">About me</h1><p id="d5b9a965-192b-4f3c-819e-c901e4b1dab0" class="">Hi there, I&#x27;m a skilled developer with expertise in .NET, databases, JavaScript, and Python.</p><p id="debdab12-89bd-4a97-ab6f-055762c370c6" class="">As a skilled backend developer, I thrive in highly collaborative work environments and take pride in finding solutions that result in customer satisfaction. I have experience designing and developing web applications with multiple APIs, third-party integrations, and databases. This versatility allows me to work efficiently in diverse environments.</p><p id="7b3df2d1-0c4e-4b37-acea-3a787d03e97c" class="">I am also a multidisciplinary designer with a curious mind. I enjoy meeting new people and understanding how they solve problems, as it helps me improve as a professional. This curiosity has allowed me to incorporate innovative design concepts into my software development solutions, resulting in a more user-friendly experience for customers.</p><p id="473cc6fd-1405-4552-b1d3-292399eeced9" class="">
+</p><p id="e904a46f-2ce6-4384-987f-dd4041ec9e9e" class="">
+</p><hr id="de03f570-48a9-4b6e-a0e2-b11cbebcd796"/><p id="833a0190-b34c-439f-8145-862c3a3fea19" class="">
+</p><p id="479be354-7dce-4010-8e74-8615285abb42" class="">
+</p><h1 id="85990f57-9e9a-4f91-b59b-1c7a6deff055" class=""><strong>👩🏻‍💻 Personal Projects</strong></h1><h2 id="9b9a030a-245e-4952-b708-0e331227778e" class=""><mark class="highlight-blue"><a href="https://github.com/tckiprotich/food-facts"><strong>food-facts</strong></a></mark></h2><p id="10a5b1ee-c637-4b91-8d39-825cf11036d5" class="">This is a personal project, a web application that allows you to scan the barcode of any food product and get its nutritional information instantly.</p><h3 id="6edd9a48-30f8-4afb-8dff-81311eeaac6c" class=""><em><mark class="highlight-gray">Technologies Used</mark></em></h3><ul id="d0a695ab-3cc7-43b7-849f-c11f4709625c" class="bulleted-list"><li style="list-style-type:disc">Next.js - A React framework for building server-side rendered web apps</li></ul><ul id="81f69236-fed0-4475-b7a2-d25d21b41546" class="bulleted-list"><li style="list-style-type:disc">Tailwind CSS - A utility-first CSS framework for rapid UI development</li></ul><ul id="b152a8e1-8f98-4178-9e55-efe0d7129954" class="bulleted-list"><li style="list-style-type:disc">Open Food Facts API - A collaborative database of food products from around the world</li></ul><h2 id="42860581-4c58-41bb-862e-e8e64e46ac51" class=""><mark class="highlight-blue"><a href="https://github.com/tckiprotich/GroupMailbox"><strong>GroupMailbox</strong></a></mark></h2><p id="f9de90e5-5270-4904-9e95-3d2401d28bde" class="">GroupMailBox is a cloud-based email collaboration SaaS tool designed to streamline email communication and enhance team productivity. With CollaborateMail, users can create shared email inboxes that multiple team members can access, collaborate on, and manage together.</p><h3 id="8efb8225-6b8c-4d88-9259-90fc4f0b188f" class=""><em><mark class="highlight-gray">Technologies Used</mark></em></h3><ul id="f6892d7b-e413-4e97-9f01-0da7e5069894" class="bulleted-list"><li style="list-style-type:disc"><a href="http://asp.net/">ASP.NET</a></li></ul><ul id="375a7936-09fe-4cc5-9e55-b26547198ad8" class="bulleted-list"><li style="list-style-type:disc">SendGrid</li></ul><ul id="188ca7e7-7ccb-4e08-992d-1d51c40edf8e" class="bulleted-list"><li style="list-style-type:disc"> mail technologies</li></ul><p id="7a25a0a5-8704-46df-a4e6-edb047ee2382" class="">
+</p><h2 id="3acbf99f-d079-449c-886d-553987279570" class=""><mark class="highlight-blue"><a href="https://github.com/yourusername/your-project"><strong>Portfolio Website/Blog</strong></a></mark></h2><p id="ab356b56-dcba-4702-9690-6988e340cb69" class="">This project is a portfolio website and blog built with Sanity CMS, Next.js, MongoDB, and Tailwind CSS. </p><h3 id="49e5bcb7-8056-4d25-8d52-de153603f783" class=""><em>Technologies Used</em></h3><ul id="caa6801f-3557-45f6-b4be-784257b5101d" class="bulleted-list"><li style="list-style-type:disc">Sanity CMS - A headless CMS for structured content</li></ul><ul id="89c5935f-bd4a-4e25-9a8b-98411bed18ba" class="bulleted-list"><li style="list-style-type:disc">Next.js - A React framework for building server-side rendered web apps</li></ul><ul id="1a8831be-f7db-4b7b-8d2f-56abcd0da7db" class="bulleted-list"><li style="list-style-type:disc">MongoDB - A document-oriented NoSQL database</li></ul><ul id="53b22908-1adc-4421-ac65-c362a3d91d83" class="bulleted-list"><li style="list-style-type:disc">Tailwind CSS - A utility-first CSS framework for rapid UI development</li></ul><ul id="0409dc09-4eff-4118-a4f2-b437a7228022" class="bulleted-list"><li style="list-style-type:disc">Vercel - A cloud platform for deploying and scaling web applications</li></ul><h2 id="d937f7d7-af96-43da-a12b-e3a344a34fe4" class=""><mark class="highlight-blue"><a href="https://github.com/tckiprotich/openai-helper"><strong>openai-</strong></a></mark><mark class="highlight-blue"><strong>image generator</strong></mark></h2><p id="4e51ca90-6f3d-4c4b-bd31-dbd6b32ef7d5" class="">This is a personal project, an API that  integrate OpenAI&#x27;s GPT-3 to generate image based on prompts </p><h3 id="495b0a43-0b90-47e8-ad63-780915586eaa" class=""><em>Technologies Used</em></h3><ul id="1f0d4651-092f-4fec-839b-c269d1de0d54" class="bulleted-list"><li style="list-style-type:disc">Express.js - A lightweight web framework for Node.js</li></ul><ul id="c72fb333-a8c3-4b9f-938a-339f9fcb1763" class="bulleted-list"><li style="list-style-type:disc">OpenAI API - A powerful language model for generating text</li></ul><p id="2750e8aa-ab37-469b-af42-e3575caaa75e" class="">  </p><p id="565c5de8-4dde-4515-8b7e-dc51a2f3c769" class="">
+</p><p id="b1f1d557-89bc-44c7-a423-332a28bfe17e" class="">
+</p><hr id="02cf2d04-70dd-4ce4-ae4b-7597015d1f60"/><h1 id="c0bb451d-e3e6-4dc4-be34-6dcf776a78a1" class=""><strong>👩🏻‍💻 </strong>Work experience</h1><h2 id="efca91f7-e20f-4034-bd23-e643e29cc568" class="">ICT Officer</h2><p id="55beeeb8-1761-467d-aa73-62d7ad103c94" class="">Nakuru County<mark class="highlight-gray"><em>,Nakuru, kenya – (jan 2022)</em></mark></p><ul id="ae4afe8a-d6c5-4ff1-bd8d-ddb5d9b52ee7" class="bulleted-list"><li style="list-style-type:disc">Conducted routine maintenance of the organization&#x27;s ICT infrastructure, including hardware, software, and networking equipment.</li></ul><ul id="a22ad15f-7f6e-4abb-b379-5368c924dcc9" class="bulleted-list"><li style="list-style-type:disc">Developed and implemented ICT policies and procedures to ensure the security and integrity of the organization&#x27;s data.</li></ul><ul id="586b0923-285b-4524-a37a-a9bb976ca7ed" class="bulleted-list"><li style="list-style-type:disc">Worked with other departments to identify areas where ICT could be used to improve efficiency and effectiveness.</li></ul><ul id="8d453f94-0357-4f7e-814d-be5016709c09" class="bulleted-list"><li style="list-style-type:disc">Provided ICT training and support to staff members as needed.</li></ul><h2 id="1f11b3b3-003e-499f-afe0-bee6cedeb613" class="">Reseach Assistant</h2><p id="73a2fde2-c93a-417d-9834-82fb47c2469e" class="">Worl Vision Kenya<mark class="highlight-gray"><em>,Nakuru, Kenya – (June 2022)</em></mark></p><ul id="5974bef8-aec7-4cb8-a728-4c139316cce4" class="bulleted-list"><li style="list-style-type:disc">Conducted literature reviews and data analysis for ongoing research projects</li></ul><ul id="9ecc80a3-f3b2-442e-a150-a52a7f142a53" class="bulleted-list"><li style="list-style-type:disc">Coordinated and participated in research team meetings and discussions</li></ul><ul id="12566272-6c4f-4a81-abc4-416d05220878" class="bulleted-list"><li style="list-style-type:disc">Assisted in the development and implementation of research protocols and procedures</li></ul><ul id="9372761a-1fe8-4fcd-9a03-7286dc1fd374" class="bulleted-list"><li style="list-style-type:disc">Conducted research interviews and surveys with study participants</li></ul><ul id="e9f874b1-4eb0-4828-b98c-8af9730c292c" class="bulleted-list"><li style="list-style-type:disc">Assisted in the preparation of research reports and manuscripts for publication</li></ul><p id="9e895130-81b8-47cc-9b0a-32f8acc76e54" class="">
+</p><h2 id="aa3bb401-e82f-4289-aa99-9be492f142d0" class="">🗣 Languages</h2><h3 id="ebccd8e7-84d2-4eba-ac6d-4dbc18801c8f" class="">English 🇺🇸</h3><p id="ee6f3bfe-518a-4781-9d24-298e3027f8f9" class="">Proficient speaker </p><hr id="66646a97-1e09-4c09-a0a4-510caf70ad01"/><h1 id="2198bfc0-3f13-4a46-b7ea-cd2ae5fe49b5" class="">📜 Articles and Talks</h1><ul id="e8282899-aeea-44a2-99d7-369fbc1b65fe" class="bulleted-list"><li style="list-style-type:disc"><a href="https://tckiprotich.vercel.app/post/http-response-status-codes">HTTP response status codes.</a></li></ul><ul id="ec158e14-4273-458b-984e-f99658a4e1a5" class="bulleted-list"><li style="list-style-type:disc"><a href="https://tckiprotich.vercel.app/post/artificial-intelligence-ai">Artificial Intelligence (AI)</a></li></ul><ul id="7432234e-4cfe-4153-b3e6-d3924746646a" class="bulleted-list"><li style="list-style-type:disc"></li></ul><hr id="58765043-4761-44d4-8b5b-17291e84944d"/><h1 id="7e70174d-b359-4e98-bd62-5ee7b50902da" class="">📚 Education </h1><h2 id="5a4cfe4e-c34c-48d8-bde3-838fbe76e651" class=""><strong>Bachelor&#x27;s Degree in Telecommunication </strong></h2><p id="d61af681-2304-4912-bbdf-0f4b439c0a23" class="">Kabarak University</p><p id="8c316f97-4bae-4e60-8aea-a77d47ca10d2" class="">
+</p><h2 id="bb853b52-2f28-490c-a896-d5154a214ecf" class="">Software Engineering<strong> </strong></h2><p id="92fae23d-80dc-4cfe-9814-eaf55edb1039" class="">ALX Africa group</p><p id="9ec36485-c244-471d-9673-fc50dca30075" class="">
+</p><h2 id="ee1b402e-0c8e-435d-bceb-a84c8d88ce96" class="">Product design<strong> </strong></h2><p id="e62d106b-dc61-4f75-b50c-43a6b3ba003a" class="">Zuri Africa</p><p id="c9dbb0a2-2265-45d3-8263-1b6e5dd1dff4" class="">
+</p><h2 id="2b86f8af-aa07-48ff-9435-6560de2d3e53" class=""></h2><p id="4c825c0b-2877-42a2-94d6-13d1ceefe0fb" class="">
+</p></div></article></body></html>
