@@ -34,7 +34,7 @@ I am also a multidisciplinary designer with a curious mind. I enjoy meeting new 
 
 [🐦 twitter.com/tckiprotichh](https://twitter.com/tckiprotich)
 
-[🔗 linkedin.com/collins-tonui](https://www.linkedin.com/in/collins-tonui)
+[🔗 linkedin.com/collins-tonui](https://www.linkedin.com/in/tckiprotich)
 
 [👾 github.com/tckiprotich](https://github.com/tckiprotich)
 
