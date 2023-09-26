@@ -7,11 +7,10 @@
 
 
 <aside>
-Hi there, I'm a skilled developer with expertise in .NET, databases, JavaScript, and Python.
+Hi there, I'm Collins Tonui,  Fullstack developer with expertise in .NET, databases, JavaScript, and Python.
 
-As a skilled backend developer, I thrive in highly collaborative work environments and take pride in finding solutions that result in customer satisfaction. I have experience designing and developing web applications with multiple APIs, third-party integrations, and databases. This versatility allows me to work efficiently in diverse environments.
-
-I am also a multidisciplinary designer with a curious mind. I enjoy meeting new people and understanding how they solve problems, as it helps me improve as a professional. This curiosity has allowed me to incorporate innovative design concepts into my software development solutions, resulting in a more user-friendly experience for customers.
+- I have experience designing and developing web applications with multiple APIs, third-party integrations, and databases.
+- I am also a multidisciplinary designer with a curious mind. I enjoy meeting new people and understanding how they solve problems, as it helps me improve as a professional. This curiosity has allowed me to incorporate innovative design concepts into my software development solutions, resulting in a more user-friendly experience for customers.
 
 </aside>
 <button style="background-color: teal;
